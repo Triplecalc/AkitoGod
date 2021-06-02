@@ -20,7 +20,7 @@ $(function () {
 });
 $(function () {
     $(".typed").typed({
-        strings: ['Mika', "Кто это?", "Python/PHP/html разраб", "Игроман...", "Кодер", "Недохакер", "Анимешник", "Психолог"],
+        strings: ['Mika', "Кто это?", "Python/PHP/html кодер", "Игроман...", "Кодер рукожоп", "Недохакер", "Анимешник", "Психолог"],
         typeSpeed: 100,
         loop: true,
         cursorChar: "|",
