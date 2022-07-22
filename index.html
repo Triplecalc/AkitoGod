@@ -20,6 +20,8 @@
 
     <script src="https://sindresorhus.com/devtools-detect/index.js"></script>
 
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+
     <link rel="stylesheet" href="assets/fonts/gothampro/style.css">
 
     <link rel="stylesheet" href="assets/vars.css">
@@ -72,7 +74,7 @@
 
             <a href="javascript://" class="link" onclick="location.href='tg://resolve?domain=Edward_Kallin'">Telegram</a>
 
-            <a href="javascript://" class="link" onclick="location.href='https://yoomoney.ru/to/4100112152102943'">ЮMoney</a>
+            <a href="javascript://" class="link" onclick="location.href='https://donate.qiwi.com/payin/Edward_Kallin'">Донат</a>
 
         </div>
 
@@ -106,7 +108,41 @@
   </style>
  </head> 
  <body> 
-  <button id="openDialog">Дополнительно</button>
+
+  <!-- Кнопка открытия диалогового окна -->
+<button onClick='opendialog()' class='button'>Дополнительно</button>
+<!-- Div с классом back-dialog будет затемнять страницу -->
+<div class="back-dialog" id="dialog"> 
+<!-- Блок с нашим контентом -->
+    <div class="dialog-content">
+<!-- Заголовок и кнопка закрытия окна -->
+        <div class="dialog-title">
+            <span>Информация о сайте</span>
+            <a class='close-dialog' href='javascript: closedialog()'></a>
+       </div>
+       
+       Друзья, прошу учесть что это только первая версия моего сайта, и некоторых функции может сейчас не быть. Однако я очень надеюсь, что благодаря вам это скоро изменится. Только благодаря вашей поддержки я могу развивать свои проекты дальше. 
+       <br>
+    <br>
+       Спасибо вам за поддержку! &#10084;
+    </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+        $("#dialog").hide(); //скрываем окно при загрузке страница
+    });
+
+    function opendialog(){
+        $("#dialog").fadeIn(); //плавное появление блока
+    }
+
+    function closedialog(){
+        $("#dialog").fadeOut(); //плавное исчезание блока
+    }
+</script>
+
+  <!--<button id="openDialog">Дополнительно</button>
   <dialog>
    <p>Друзья, прошу учесть что этой мой первый сайт, и что функционал в нём будет дополняться. На данный момент вам доступна кнопка доната и возможность со мной связаться. Чуть позже здесь также будет моё портфилио из созданных мною программ, а также возможность заказать себе бота или приложение под вашу компанию. Спасибо!</p>
    <p><button id="closeDialog">Закрыть</button></p>
@@ -119,7 +155,7 @@
    document.querySelector('#closeDialog').onclick = function() {
     dialog.close(); // Прячем диалоговое окно
    }
-  </script>
+  </script>-->
   
 <!--<form action="">
    <fieldset>
